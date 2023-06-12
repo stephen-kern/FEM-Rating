@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import Star from "../../images/icon-star.svg";
 import RatingNumbers from "../RatingNumbers";
+import Feedback from "../Feedback";
 
 const Rating = () => {
   const [rating, setRating] = useState(0);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleRatingChange = (selectedRating) => {
     setRating(selectedRating);
+  };
+
+  const handleSubmit = () => {
+    setSubmitted(true);
   };
 
   return (
@@ -17,8 +23,18 @@ const Rating = () => {
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      <RatingNumbers rating={rating} handleRatingChange={handleRatingChange}/>
-      <button type="submit">SUBMIT</button>
+      {submitted ? (
+        <Feedback />
+      ) : (
+        <>
+          {" "}
+          <RatingNumbers
+            rating={rating}
+            handleRatingChange={handleRatingChange}
+          />
+          <button type="submit">SUBMIT</button>{" "}
+        </>
+      )}
     </div>
   );
 };
