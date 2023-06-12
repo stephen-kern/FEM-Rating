@@ -16,34 +16,28 @@
   --darkdarkblue:hsl(216, 12%, 8%);
 }
 
+html{
+  min-height: 100vh;
+}
+
 body {
+  min-height: 100vh;
   font-family: 'Overpass', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--darkdarkblue);
-}
-
-.app {
   display: flex;
-  min-height: 100%;
-}
-
-/* Rating Component Styles  */
-
-.rating-container{
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-content: center;
-  padding: 1.5rem;
-  background-color: var(--darkblue);
-  width: 20vw;
-  border-radius: 1.5rem;
+  align-items: center;
 }
 
-.rating-container * {
-  margin: 0.5rem 0;
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* utility styles */
 
 h1 {
   color: var(--white);
@@ -53,6 +47,23 @@ p{
   font-size: 15px;
   color: var(--lightgray);
   line-height: 1.5rem;
+}
+
+
+/* Rating Component Styles  */
+
+.rating-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--darkblue);
+  width: 25rem;
+  border-radius: 1.5rem;
+}
+
+.rating-container * {
+  margin: 0.5rem 0;
 }
 
 .star-icon{
@@ -103,3 +114,24 @@ p{
  background-color: var(--mediumgray);
  color: var(--white);
 }
+
+/* Feedback styles */
+
+.feedback-container{
+  text-align: center;
+}
+
+.user-feedback{
+  background-color: var(--bgblue);
+  padding: 0.3rem;
+  border-radius: 1.5rem;
+  margin: 1rem 5rem 2rem;
+  color: var(--primary);
+}
+
+.feedback-message{
+  width: 97%;
+  margin: 0 auto;
+}
+
+
