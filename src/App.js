@@ -1,4 +1,6 @@
+import React from 'react';
 import Rating from "./components/Rating";
+import './index.css';
 
 function App() {
   return (

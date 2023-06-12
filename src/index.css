@@ -1,13 +1,77 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary:hsl(25, 97%, 53%);
+  --white:hsl(0, 0%, 100%);
+  --lightgray:hsl(217, 12%, 63%);
+  --mediumgray:hsl(216, 12%, 54%);
+  --darkblue:hsl(213, 19%, 18%);
+  --darkdarkblue:hsl(216, 12%, 8%);
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--darkdarkblue);
+}
+
+.app {
+  display: flex;
+  min-height: 100%;
+}
+
+/* Rating Component Styles  */
+
+.rating-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 1.5rem;
+  background-color: var(--darkblue);
+  width: 20vw;
+  border-radius: 1.5rem;
+}
+
+.rating-container * {
+  margin: 0.5rem 0;
+}
+
+h1 {
+  color: var(--white);
+}
+
+p{
+  font-size: 15px;
+  color: var(--lightgray);
+  line-height: 1.5rem;
+}
+
+.star-icon{
+  width: 2.5rem;
+  padding: 0.75rem;  
+  border-radius: 50%;
+  background-color: var(--mediumgray);
+}
+
+.submit-button{
+  font-weight: 700;
+  letter-spacing: 0.10rem;
+  color: var(--white);
+  background-color: var(--primary);
+  border: none;
+  padding: 0.7rem 0;
+  border-radius: 1.5rem;
+}
+
+.submit-button:hover{
+  color: var(--primary);
+  background-color: var(--white);
 }

@@ -21,7 +21,7 @@ const Rating = () => {
         <Feedback selectedRating={rating} />
       ) : (
         <>
-          <img alt="star icon" src={Star} />
+          <img className="star-icon" alt="star icon" src={Star} />
           <h1>How did we do?</h1>
           <p>
             Please let us know how we did with your support request. All
@@ -31,7 +31,7 @@ const Rating = () => {
             rating={rating}
             handleRatingChange={handleRatingChange}
           />
-          <button type="submit" onClick={handleSubmit}>
+          <button className="submit-button" type="submit" onClick={handleSubmit}>
             SUBMIT
           </button>{" "}
         </>
